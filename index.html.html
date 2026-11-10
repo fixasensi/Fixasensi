@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0e">
+<meta name="description" content="FIXASENSI — Free and premium Free Fire MAX sensitivity guides, device presets and headshot tips.">
+<title>FIXASENSI — Find Your Headshot Settings</title>
+<style>
+:root{--bg:#09090c;--panel:#131319;--panel2:#1b1b23;--red:#ff343e;--red2:#b80f22;--white:#f7f7fb;--muted:#a7a7b3;--line:#2b2b35;--green:#63df9a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#321016 0,transparent 35%),var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#09090ceF;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:1000;letter-spacing:-1px;font-size:1.35rem}.brand span{color:var(--red)}nav{display:flex;gap:22px;color:#ddd;font-size:.92rem}nav a:hover{color:var(--red)}.menu{display:none;background:none;color:white;border:1px solid var(--line);padding:8px 11px;border-radius:9px}
+.btn{border:0;border-radius:10px;padding:12px 17px;background:var(--red);color:white;font-weight:850;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}.btn.secondary{background:transparent;border:1px solid #555;color:white}.btn.small{padding:9px 12px;font-size:.88rem}
+.hero{padding:76px 0 55px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:38px}.eyebrow{color:#ff7a80;font-weight:850;letter-spacing:2px;text-transform:uppercase;font-size:.76rem}.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:.96;letter-spacing:-3px;margin:15px 0}.hero h1 span{color:var(--red)}.hero p{color:var(--muted);font-size:1.06rem;line-height:1.7;max-width:580px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-card{background:linear-gradient(145deg,#291016,#17171e 60%);border:1px solid #54242c;border-radius:24px;padding:25px;box-shadow:0 25px 80px #0008}.hero-mark{height:230px;border-radius:17px;background:linear-gradient(135deg,#ff3d48,#8d0717 55%,#1a0d12);display:grid;place-items:center;position:relative;overflow:hidden}.hero-mark:before,.hero-mark:after{content:"";position:absolute;border:1px solid #ffffff30;border-radius:50%;width:260px;height:260px}.hero-mark:after{width:340px;height:340px}.crosshair{font-size:5rem;font-weight:1000;text-shadow:0 5px 25px #48000b}.hero-mark strong{position:absolute;bottom:18px;letter-spacing:4px;font-size:.8rem}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.stat{background:#0b0b10;border:1px solid var(--line);padding:12px;border-radius:12px;text-align:center}.stat b{display:block;font-size:1.15rem}.stat small{color:var(--muted)}
+section{padding:52px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section-head h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:7px 0 0;letter-spacing:-1px}.section-head p{color:var(--muted);margin:0;max-width:460px;line-height:1.5}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:20px}.card h3{margin:8px 0}.card p{color:var(--muted);line-height:1.55;font-size:.94rem}.tag{display:inline-block;border-radius:999px;padding:5px 9px;font-size:.72rem;font-weight:900;letter-spacing:.5px;background:#302026;color:#ff9da2}.tag.free{background:#123324;color:#83e9b0}.tag.premium{background:#382b12;color:#ffd36c}.card-top{display:flex;justify-content:space-between;align-items:center}.device-icon{width:42px;height:42px;border-radius:12px;background:#2a171c;display:grid;place-items:center;font-size:1.25rem}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.controls input,.controls select{background:#15151c;color:white;border:1px solid var(--line);border-radius:10px;padding:12px;min-width:180px;flex:1}.settings{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:17px 0}.setting{background:#0c0c11;border:1px solid var(--line);border-radius:10px;padding:11px}.setting small{color:var(--muted);display:block}.setting b{font-size:1.25rem}
+.premium-card{background:linear-gradient(140deg,#211710,#17131a);border-color:#72502a}.lock{font-size:1.7rem}.notice{border:1px solid #5a4523;background:#201a10;color:#e9d6a9;padding:13px 15px;border-radius:12px;font-size:.88rem;line-height:1.5;margin-top:15px}
+.steps{counter-reset:step}.step{display:flex;gap:14px;align-items:flex-start}.step:before{counter-increment:step;content:counter(step);flex:none;width:32px;height:32px;border-radius:10px;background:#3a1118;color:#ff858b;display:grid;place-items:center;font-weight:900}.step+.step{margin-top:18px}
+.faq details{background:var(--panel);border:1px solid var(--line);padding:16px;border-radius:12px}.faq details+details{margin-top:10px}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted);line-height:1.6}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#f7f7fb;color:#111;padding:11px 16px;border-radius:10px;font-weight:800;opacity:0;pointer-events:none;transition:.2s;z-index:30}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:780px){.hero{grid-template-columns:1fr;padding-top:52px}.hero-card{max-width:520px}.grid{grid-template-columns:1fr 1fr}nav{display:none;position:absolute;top:70px;left:0;right:0;background:#0b0b0f;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column}.nav.open nav{display:flex}.menu{display:block}.section-head{display:block}.section-head p{margin-top:10px}.settings{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.stats{grid-template-columns:repeat(3,1fr)}.stat{padding:9px 4px}.stat b{font-size:1rem}.hero-mark{height:180px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav" id="nav">
+<a class="brand" href="#home">FIXA<span>SENSI</span></a>
+<nav><a href="#free">Free Sensi</a><a href="#premium">Premium</a><a href="#guide">Headshot Guide</a><a href="#about">About</a></nav>
+<a class="btn small" href="#free">Explore Sensi</a><button class="menu" id="menu" aria-label="Toggle menu">☰</button>
+</div></header>
+<main>
+<div class="wrap hero" id="home">
+<div><div class="eyebrow">Free Fire MAX • Community settings</div><h1>FIND YOUR<br><span>HEADSHOT</span><br>SETTINGS.</h1><p>Explore device-based sensitivity presets, learn drag techniques and fine-tune your gameplay. Start with a preset, then calibrate it to your own touch.</p><div class="hero-actions"><a class="btn" href="#free">Get Free Sensi ↗</a><a class="btn secondary" href="#premium">View Premium</a></div></div>
+<div class="hero-card"><div class="hero-mark"><div class="crosshair">＋</div><strong>LOCK IN • DRAG UP • HEADSHOT</strong></div><div class="stats"><div class="stat"><b>FREE</b><small>Presets</small></div><div class="stat"><b>DEVICE</b><small>Based guides</small></div><div class="stat"><b>PRO</b><small>Tips & packs</small></div></div></div>
+</div>
+
+<section id="free"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Start here</div><h2>Free sensitivity presets</h2></div><p>Use these as starter values only. Sensitivity varies by device, screen, FPS and personal control.</p></div>
+<div class="controls"><input id="search" type="search" placeholder="Search device or preset…" aria-label="Search presets"><select id="deviceFilter" aria-label="Filter by device"><option value="all">All devices</option><option value="iphone">iPhone</option><option value="samsung">Samsung</option><option value="redmi">Redmi / POCO</option><option value="realme">Realme</option><option value="oneplus">OnePlus</option><option value="vivo-oppo">Vivo / OPPO</option><option value="budget">Budget Android</option><option value="balanced">Balanced</option></select></div>
+<div class="grid" id="presetGrid" aria-live="polite"></div>
+ <div class="notice">All values use the in-game 0–200 scale. These are suggested starting points, not device-lab-tested results or guaranteed headshots. Phone model, refresh rate, FPS, HUD, grip and play style can change what feels right. Test in Training Mode and adjust one slider at a time.</div>
+</div></section>
+
+<section id="premium"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Upgrade your setup</div><h2>Premium sensi packs</h2></div><p>Showcase your paid packs here. Add your own pack details, preview images and secure checkout link before launch.</p></div>
+<div class="grid">
+<article class="card premium-card"><div class="card-top"><div class="device-icon">⚡</div><span class="tag premium">PREMIUM</span></div><div class="lock">🔒</div><h3>Headshot Pro Pack</h3><p>Device-specific presets and a calibration checklist. Add your actual pack contents here.</p><p><b>Price: Add your price</b></p><a class="btn small premium-link" href="#contact">Enquire to buy</a></article>
+<article class="card premium-card"><div class="card-top"><div class="device-icon">🔥</div><span class="tag premium">PREMIUM</span></div><div class="lock">🔒</div><h3>Drag King Pack</h3><p>Custom drag-control settings and practice drills. Replace this description with your offer.</p><p><b>Price: Add your price</b></p><a class="btn small premium-link" href="#contact">Enquire to buy</a></article>
+<article class="card premium-card"><div class="card-top"><div class="device-icon">👑</div><span class="tag premium">PREMIUM</span></div><div class="lock">🔒</div><h3>Ultimate Device Pack</h3><p>A collection of device-wise settings. List supported models and exactly what buyers receive.</p><p><b>Price: Add your price</b></p><a class="btn small premium-link" href="#contact">Enquire to buy</a></article>
+</div>
+<div class="notice">Premium cards are catalogue placeholders only. No payment is collected on this demo site. Connect a trusted payment provider and deliver files securely before accepting orders.</div>
+</div></section>
+
+<section id="guide"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Improve your control</div><h2>Quick headshot calibration</h2></div><p>Don't copy settings blindly. Make small changes and test them in Training Mode.</p></div>
+<div class="grid">
+<div class="card step"><div><h3>Set a baseline</h3><p>Choose one preset close to your device and keep your HUD and DPI settings consistent during testing.</p></div></div>
+<div class="card step"><div><h3>Test short drags</h3><p>Practice on stationary targets first. Use a comfortable upward movement rather than forcing a very long drag.</p></div></div>
+<div class="card step"><div><h3>Adjust gradually</h3><p>If your aim overshoots, lower General or Red Dot slightly. If it stops short, raise one setting a little and retest.</p></div></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">About the brand</div><h2>Built for the FIXASENSI community</h2></div><p>A simple hub for sensitivity guides, gameplay tips and your own Free Fire MAX content.</p></div>
+<div class="card"><h3>Our promise</h3><p>We share settings as starting points, explain how to test them and keep recommendations honest. Results depend on each player's device, game version, controls and practice. FIXASENSI is an independent community brand and is not affiliated with or endorsed by Garena.</p></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Stay connected</div><h2>Contact FIXASENSI</h2></div><p>Follow FIXASENSI for new sensitivity guides, gameplay clips and updates.</p></div>
+<div class="card"><h3>Want a custom device preset or premium pack?</h3><p>Message us on Instagram for availability, device support and pack details.</p><a class="btn" id="instagramLink" href="https://www.instagram.com/fixasensi/" target="_blank" rel="noopener noreferrer">Follow @FIXASENSI ↗</a></div>
+</div></section>
+<section class="faq"><div class="wrap"><div class="section-head"><div><div class="eyebrow">FAQ</div><h2>Frequently asked questions</h2></div></div>
+<details><summary>Are these settings guaranteed headshots?</summary><p>No. Sensitivity is personal and depends on device, touch response, FPS, HUD and practice. Use presets as a starting point only.</p></details>
+<details><summary>How do I find my best sensitivity?</summary><p>Start with a preset, test it in Training Mode and change one value at a time in small increments.</p></details>
+<details><summary>How do I buy a premium pack?</summary><p>Use the contact link to ask the site owner for current pack contents, price and secure payment options. This starter website does not process payments.</p></details>
+</div></section>
+</main>
+<footer><div class="wrap foot"><div><a class="brand" href="#home">FIXA<span>SENSI</span></a><div>Independent Free Fire MAX community resource.</div></div><div><a class="btn small" href="https://www.instagram.com/fixasensi/" target="_blank" rel="noopener noreferrer">📸 Follow @FIXASENSI</a><p>© <span id="year"></span> FIXASENSI. All rights reserved.</p></div></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite">Copied!</div>
+<script>
+const nav = document.getElementById('nav');
+document.getElementById('menu').addEventListener('click', () => nav.classList.toggle('open'));
+document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const presets = [
+  {device:'iphone',name:'iPhone 15 / 16 / 17',desc:'High-refresh iPhone starter for controlled close-range drags.',values:[152,146,130,98,72,118],tag:'iPhone • High refresh'},
+  {device:'iphone',name:'iPhone 11–14',desc:'Balanced starting point for older iPhone generations.',values:[160,152,136,108,78,122],tag:'iPhone • Standard'},
+  {device:'samsung',name:'Samsung Galaxy S series',desc:'Flagship Samsung starter; tune down if your aim overshoots.',values:[165,155,138,110,80,125],tag:'Samsung • Flagship'},
+  {device:'samsung',name:'Samsung Galaxy A series',desc:'Moderate starter for mainstream Galaxy A phones.',values:[170,160,140,112,82,128],tag:'Samsung • A series'},
+  {device:'redmi',name:'Redmi Note / POCO X series',desc:'Mid-range Xiaomi-family starter for 60–120Hz devices.',values:[178,168,145,112,82,128],tag:'Redmi / POCO • Mid-range'},
+  {device:'realme',name:'Realme number / Narzo series',desc:'General mid-range Android starting point.',values:[176,166,145,115,82,126],tag:'Realme • Mid-range'},
+  {device:'oneplus',name:'OnePlus Nord / flagship',desc:'Moderated values for responsive high-refresh screens.',values:[158,150,134,102,76,122],tag:'OnePlus • High refresh'},
+  {device:'vivo-oppo',name:'Vivo / OPPO phones',desc:'Balanced starting point; tune to your actual FPS and touch feel.',values:[172,162,142,112,80,125],tag:'Vivo / OPPO'},
+  {device:'budget',name:'Budget Android • 3–4GB RAM',desc:'Steady starter for entry-level devices; prioritise stable FPS.',values:[162,150,132,104,78,120],tag:'Budget Android'},
+  {device:'balanced',name:'Garena DEFAULT baseline',desc:'Neutral baseline before trying faster drag settings.',values:[100,100,100,100,71,63],tag:'Baseline'}
+];
+const labels = ['General','Red Dot','2x Scope','4x Scope','Sniper','Free Look'];
+const grid = document.getElementById('presetGrid');
+const search = document.getElementById('search');
+const filter = document.getElementById('deviceFilter');
+const toast = document.getElementById('toast');
+let toastTimer;
+
+function renderPresets() {
+  const q = search.value.trim().toLowerCase();
+  const f = filter.value;
+  const matches = presets.filter(p =>
+    (f === 'all' || p.device === f) &&
+    (p.name + ' ' + p.desc + ' ' + p.tag).toLowerCase().includes(q)
+  );
+  grid.innerHTML = matches.map(p => `<article class="card preset" data-device="${p.device}">
+    <div class="card-top"><div class="device-icon">📱</div><span class="tag free">FREE</span></div>
+    <h3>${p.name}</h3><p>${p.desc}</p><span class="tag">${p.tag}</span>
+    <div class="settings">${p.values.map((v,n) => `<div class="setting"><small>${labels[n]}</small><b>${v}</b></div>`).join('')}</div>
+    <button class="btn small copy" type="button" data-index="${presets.indexOf(p)}">Copy settings</button>
+  </article>`).join('');
+  if (!matches.length) grid.innerHTML = '<div class="card"><h3>No matching device found</h3><p>Try another model name or choose All devices.</p></div>';
+}
+search.addEventListener('input', renderPresets);
+filter.addEventListener('change', renderPresets);
+grid.addEventListener('click', async event => {
+  const btn = event.target.closest('.copy');
+  if (!btn) return;
+  const p = presets[Number(btn.dataset.index)];
+  const text = `${p.name} — ` + labels.map((label,n) => `${label} ${p.values[n]}`).join(', ');
+  try { await navigator.clipboard.writeText(text); toast.textContent = 'Settings copied!'; }
+  catch (e) { toast.textContent = text; }
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+});
+renderPresets();
+</script>
+</body></html>
